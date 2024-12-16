@@ -1,7 +1,7 @@
 import Modal from 'react-modal';
 import { useEffect, useState, useRef, MouseEvent } from 'react';
 import SearchBar from './SearchBar/SearchBar';
-import { Image, ResponseData, search } from './pixabay-api';
+import { Image, search } from './pixabay-api';
 import Loader from './Loader/Loader';
 import ImageGallery from './ImageGallery/ImageGallery';
 import LoadMoreBtn from './LoadMoreBtn/LoadMoreBtn';

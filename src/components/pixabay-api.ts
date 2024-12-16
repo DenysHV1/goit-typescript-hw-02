@@ -12,14 +12,14 @@ export interface Image {
   alt_description: string;
 }
 
-export interface ResponseData {
+export interface Response {
   total: number;
   total_pages: number;
   results: Image[];
 }
 
-export async function search(element = 'cat', page = 1): Promise<ResponseData> {
+export async function search(element = 'cat', page = 1): Promise<Response> {
   const url = `${BASE_URL}?client_id=${KEY}&orientation=landscape&query=${element}&page=${page}&per_page=12`;
-  const response = await axios.get<ResponseData>(url);
+  const response = await axios.get<Response>(url);
   return response.data;
 }
